@@ -20,5 +20,5 @@ internal static class AuthConfig
     /// <summary>
     /// 要求するアクセス許可スコープ
     /// </summary>
-    public static readonly string[] Scopes = ["User.Read"];
+    public static readonly string[] Scopes = ["User.Read", "Mail.Read"];
 }

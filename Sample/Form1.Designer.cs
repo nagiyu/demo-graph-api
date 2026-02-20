@@ -19,6 +19,7 @@ namespace Sample
         {
             btnLogin = new Button();
             btnLogout = new Button();
+            btnGetMailFolders = new Button();
             lblStatus = new Label();
             rtbInfo = new RichTextBox();
             SuspendLayout();
@@ -42,11 +43,21 @@ namespace Sample
             btnLogout.UseVisualStyleBackColor = true;
             btnLogout.Click += btnLogout_Click;
 
+            // btnGetMailFolders
+            btnGetMailFolders.Enabled = false;
+            btnGetMailFolders.Location = new Point(228, 12);
+            btnGetMailFolders.Name = "btnGetMailFolders";
+            btnGetMailFolders.Size = new Size(150, 32);
+            btnGetMailFolders.TabIndex = 2;
+            btnGetMailFolders.Text = "メールフォルダ取得";
+            btnGetMailFolders.UseVisualStyleBackColor = true;
+            btnGetMailFolders.Click += btnGetMailFolders_Click;
+
             // lblStatus
             lblStatus.AutoSize = true;
             lblStatus.Location = new Point(12, 56);
             lblStatus.Name = "lblStatus";
-            lblStatus.TabIndex = 2;
+            lblStatus.TabIndex = 3;
             lblStatus.Text = "状態: -";
 
             // rtbInfo
@@ -58,7 +69,7 @@ namespace Sample
             rtbInfo.ReadOnly = true;
             rtbInfo.ScrollBars = RichTextBoxScrollBars.Vertical;
             rtbInfo.Size = new Size(560, 270);
-            rtbInfo.TabIndex = 3;
+            rtbInfo.TabIndex = 4;
             rtbInfo.Text = "";
 
             // Form1
@@ -67,6 +78,7 @@ namespace Sample
             ClientSize = new Size(584, 361);
             Controls.Add(btnLogin);
             Controls.Add(btnLogout);
+            Controls.Add(btnGetMailFolders);
             Controls.Add(lblStatus);
             Controls.Add(rtbInfo);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -81,6 +93,7 @@ namespace Sample
 
         private Button btnLogin;
         private Button btnLogout;
+        private Button btnGetMailFolders;
         private Label lblStatus;
         private RichTextBox rtbInfo;
     }
